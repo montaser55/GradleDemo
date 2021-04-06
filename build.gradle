@@ -1,4 +1,4 @@
-apply plugin : 'application'
+	apply plugin : 'application'
 
 repositories{
 		mavenCentral()
@@ -11,6 +11,11 @@ dependencies{
 
 
 mainClassName= 'demo.HelloGradle'
+
+task hello{
+	description 'Greets you'
+	println 'Hello!'
+}
 
 task gitPush(type: Exec) {
     description 'Pushs git.'
